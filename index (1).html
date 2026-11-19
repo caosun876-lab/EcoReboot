@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EcoReboot | Reinicia tu tecnología, transforma el planeta</title>
+<meta name="description" content="EcoReboot rescata componentes en desuso de empresas y colegios para ensamblar ordenadores modulares, de alta calidad y 100% operativos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B7A55'/%3E%3Crect x='14' y='16' width='36' height='24' rx='4' fill='white'/%3E%3Cpath d='M32 20c10 3 11 11 0 15c-11-4-10-12 0-15z' fill='%2310B981'/%3E%3Crect x='28' y='42' width='8' height='6' fill='white'/%3E%3Crect x='20' y='47' width='24' height='4' rx='2' fill='white'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B7A55">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EcoReboot | Reinicia tu tecnología, transforma el planeta">
+<meta property="og:description" content="Ordenadores modulares hechos con componentes rescatados de empresas y colegios.">
+<meta property="og:image" content="https://caosun876-lab.github.io/EcoReboot/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0B7A55;--g2:#10B981;--ink:#1B1F22;--mut:#4A5358;--soft:#F1F6F3;--line:#DCE5E0;--r:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:0}
+body{margin:0;font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--g2);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800}
+p{margin:0}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--g);background:var(--g);color:#fff;font-size:16px;font-family:inherit;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:#085f42;border-color:#085f42}
+.btn.ghost{background:transparent;color:var(--g)}
+.btn.ghost:hover{background:var(--g);color:#fff}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:22px;letter-spacing:-.02em}
+.brand svg{width:44px;height:41px}
+.brand span{color:var(--g)}
+.menu{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-weight:500;color:var(--mut);font-size:15px}
+.menu a:hover{color:var(--g)}
+.nav .btn{padding:10px 20px;font-size:15px}
+.tg{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:inherit;font-weight:600;cursor:pointer}
+.hero{padding:72px 0 88px;background:linear-gradient(180deg,#fff 0%,var(--soft) 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:800}
+.hero p.sub{margin:24px 0 32px;font-size:19px;color:var(--mut);max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero svg{width:100%;height:auto;max-width:460px;justify-self:center}
+section{padding:88px 0}
+.lead{max-width:40em;color:var(--mut);margin-top:16px;font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.card{border:1px solid var(--line);border-radius:var(--r);padding:30px;background:#fff}
+.card .n{width:40px;height:40px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:18px}
+.card h3{font-size:20px;margin-bottom:10px}
+.card p{color:var(--mut);font-size:16px}
+.product{background:var(--soft)}
+.product .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.feat{list-style:none;margin:28px 0 32px;padding:0;display:grid;gap:16px}
+.feat li{display:flex;gap:14px;align-items:flex-start}
+.feat i{flex:none;width:26px;height:26px;border-radius:8px;background:var(--g);margin-top:2px;position:relative}
+.feat i:after{content:"";position:absolute;left:9px;top:4px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.feat b{display:block;font-weight:600}
+.feat span{color:var(--mut);font-size:16px}
+.product svg{width:100%;height:auto;max-width:440px;justify-self:center}
+.impact{background:var(--ink);color:#fff}
+.impact .lead{color:#B9C4BE}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.stat{border:1px solid #343B40;border-radius:var(--r);padding:30px}
+.stat strong{display:block;font-size:clamp(36px,5vw,52px);font-weight:800;color:var(--g2);line-height:1.1}
+.stat span{display:block;margin-top:8px;color:#D5DDD9}
+.stat small{display:block;margin-top:10px;color:#8C9892;font-size:13px}
+.rs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.rs div{background:#242A2E;border-radius:var(--r);padding:22px}
+.rs h3{font-size:19px;color:var(--g2);margin-bottom:6px}
+.rs p{font-size:15px;color:#C4CEC9}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+form{display:grid;gap:18px;border:1px solid var(--line);border-radius:var(--r);padding:32px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,select,textarea{font:inherit;font-weight:400;padding:12px 14px;border:1px solid #B8C4BE;border-radius:10px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:130px;resize:vertical}
+.note{font-size:14px;color:var(--mut)}
+footer{background:var(--ink);color:#C4CEC9;padding:48px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
+footer a{text-decoration:none;color:#fff}
+footer a:hover{color:var(--g2)}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+footer .brand{color:#fff;margin-bottom:10px}
+.copy{width:100%;border-top:1px solid #343B40;padding-top:22px;font-size:14px;color:#8C9892}
+.spin{transform-origin:200px 180px;animation:sp 28s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.pulse{animation:pl 2.4s ease-in-out infinite}
+@keyframes pl{50%{opacity:.35}}
+.cfg{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px;width:100%;max-width:470px;justify-self:center}
+.cfg h3{font-size:20px;margin-bottom:4px}
+.cfg>p{color:var(--mut);font-size:15px;margin-bottom:18px}
+.slot{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;background:var(--ink);color:#fff;border-radius:12px;padding:12px 14px;margin-bottom:10px;border:2px solid transparent}
+.slot.bad{border-color:#E5484D;background:#3A2326}
+.slot small{display:block;color:#9FB0A8;font-size:13px}
+.slot.bad small{color:#FFB4B6}
+.slot b{font-weight:600}
+.sb{font:inherit;font-size:14px;font-weight:600;border-radius:999px;border:1.5px solid var(--g2);background:transparent;color:#fff;padding:8px 14px;cursor:pointer}
+.sb:hover{background:var(--g2);color:var(--ink)}
+.slot.bad .sb{border-color:#fff}
+.lv{margin-top:16px;padding:14px 16px;border-radius:12px;background:var(--soft);font-weight:600;font-size:15px}
+.lv span{display:block;font-weight:400;color:var(--mut);margin-top:2px}
+.calc{margin-top:22px;border:1px solid #343B40;border-radius:var(--r);padding:30px}
+.calc label{color:#fff;font-size:17px;display:block;margin-bottom:12px}
+.calc label b{color:var(--g2);font-size:22px}
+input[type=range]{padding:0;border:0;background:none;accent-color:var(--g2);cursor:pointer}
+.co{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+.co strong{display:block;font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--g2);line-height:1.1}
+.co span{color:#D5DDD9;font-size:15px}
+.calc small{display:block;margin-top:16px;color:#8C9892;font-size:13px}
+@media(max-width:900px){.co{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.spin,.pulse{animation:none}}
+.slides{padding:0;background:var(--soft)}
+.pin{display:block}.on .pin{position:sticky;top:0;overflow:hidden;display:flex;flex-direction:column;height:100vh}
+.track{display:block}.on .track{display:flex;flex:1;min-height:0;transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.sl{flex:0 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:48px max(24px,calc((100% - 1160px)/2));min-width:0}.on .sl{padding-top:0;padding-bottom:0}
+.sl h2,.sl h3{font-size:clamp(28px,4vw,46px);font-weight:800}
+.sl .lead{margin-bottom:22px}
+.sl ul{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:10px}
+.sl li{display:flex;gap:12px;align-items:flex-start;color:var(--mut);font-size:16px}
+.sl li:before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--g);margin-top:9px}
+.sl ol{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:12px;counter-reset:st}
+.sl ol li{counter-increment:st;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--ink);align-items:center}
+.sl ol li:before{content:counter(st);width:32px;height:32px;margin:0;display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px}
+.sl ol span{color:var(--mut);display:block;font-size:14px}
+.step{display:inline-block;font-weight:600;color:var(--g);margin-bottom:10px;font-size:15px}
+.vis{width:100%;max-width:340px;height:min(300px,40vh);justify-self:center}
+.bar{display:none}.on .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(24px,calc((100% - 1160px)/2));border-top:1px solid var(--line);background:#fff}
+.dts{display:flex;gap:8px;align-items:center}
+.dt{width:12px;height:12px;border-radius:50%;border:2px solid var(--g);background:transparent;padding:0;cursor:pointer}
+.dt[aria-current=true]{background:var(--g);width:30px;border-radius:8px}
+.ar{font:inherit;font-weight:600;font-size:15px;border:1.5px solid var(--g);background:#fff;color:var(--g);border-radius:999px;padding:9px 18px;cursor:pointer}
+.ar:hover:not(:disabled){background:var(--g);color:#fff}
+.ar:disabled{opacity:.4;cursor:default}
+.hint{font-size:14px;color:var(--mut)}
+@media(max-width:900px){.sl{grid-template-columns:1fr;gap:14px;align-content:center}.vis{height:min(160px,22vh);order:-1}.sl h2,.sl h3{font-size:28px}.hint{display:none}.on .bar{padding:12px 10px;gap:6px}.ar{padding:8px 12px;font-size:14px}.dts{gap:5px}.sl .lead{font-size:16px;margin-top:10px;margin-bottom:14px}.sl li{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.track{transition:none}}
+body{padding-left:72px}
+.side{position:fixed;left:0;top:0;bottom:0;width:72px;background:#fff;border-right:1px solid var(--line);z-index:30;display:flex;flex-direction:column;overflow:hidden auto;scrollbar-width:none;transition:width .25s ease,box-shadow .25s}
+.side:hover,.side:focus-within,.side.open{width:264px;box-shadow:8px 0 30px rgba(0,0,0,.1)}
+.sdb{display:flex;align-items:center;gap:12px;padding:16px 14px;text-decoration:none;font-weight:800;font-size:21px;white-space:nowrap;color:var(--ink);letter-spacing:-.02em}
+.sdb svg{flex:none;width:44px;height:41px}
+.sdb span{color:var(--g)}
+.side ul{list-style:none;margin:0;padding:0 12px;display:grid;gap:4px}
+.it{display:flex;align-items:center;gap:16px;padding:12px;border-radius:12px;text-decoration:none;color:var(--mut);font:inherit;font-weight:600;font-size:15px;white-space:nowrap;background:none;border:0;width:100%;cursor:pointer}
+.it svg{flex:none;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.it:hover{background:var(--soft);color:var(--g)}
+.it.don{background:var(--g);color:#fff}
+.it.don:hover{background:#085f42;color:#fff}
+.lb{opacity:0;transition:opacity .15s}
+.side:hover .lb,.side:focus-within .lb,.side.open .lb{opacity:1;transition-delay:.08s}
+.sep{height:1px;background:var(--line);margin:14px 20px}
+.sgt{padding:0 24px 6px;font-size:13px;color:#6B777C;white-space:nowrap}
+.sdt{display:none}
+@media(hover:none),(max-width:900px){.sdt{display:flex}}
+@media(max-width:900px){body{padding-left:56px}.side{width:56px}.side.open{width:min(264px,80vw)}.side:hover:not(.open):not(:focus-within){width:56px;box-shadow:none}.side:hover:not(.open):not(:focus-within) .lb{opacity:0}.sdb{padding:16px 6px}.side ul{padding:0 6px}.it{padding:12px 10px}.sgt{padding-left:16px}.sep{margin:14px 10px}}
+@media(prefers-reduced-motion:reduce){.side,.lb{transition:none}}
+.spec{border:1px solid var(--line);background:#fff;border-radius:12px;padding:16px 18px;margin:0 0 24px;display:grid;gap:8px;font-size:15px;color:var(--mut)}
+.spec b{color:var(--ink)}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.gal figure{margin:0;position:relative;border-radius:var(--r);overflow:hidden;background:var(--soft);aspect-ratio:4/3;border:1px solid var(--line);display:grid;place-items:center;color:var(--mut);text-align:center;padding:16px 16px 44px;font-size:15px}
+.gal svg{position:absolute;inset:0;width:100%;height:100%}.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:rgba(27,31,34,.78);color:#fff;padding:9px 14px;font-size:14px;text-align:left}
+.fq{max-width:780px;margin:36px auto 0}
+.vp{overflow:hidden}
+.ft{display:flex;transition:transform .6s cubic-bezier(.7,0,.2,1)}
+.fs{flex:0 0 100%;padding:4px;min-width:0;display:grid;gap:14px;align-content:start;min-height:300px}
+.bq,.ba{max-width:88%;padding:16px 20px;border-radius:20px;font-size:17px;line-height:1.55}
+.bq{background:var(--soft);border:1px solid var(--line);border-bottom-left-radius:6px;font-weight:600;justify-self:start}
+.ba{background:var(--g);color:#fff;border-bottom-right-radius:6px;justify-self:end}
+.fc{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:20px}
+.fc .mid{color:var(--mut);font-size:15px;font-weight:600}
+.pb{height:4px;background:var(--line);border-radius:4px;margin-top:16px;overflow:hidden}
+.pb span{display:block;height:100%;width:0;background:var(--g)}
+@keyframes fl{to{width:100%}}
+@media(max-width:900px){.gal{grid-template-columns:1fr}.bq,.ba{max-width:94%}.fc .ar{padding:8px 12px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){.ft{transition:none}}
+@media(max-width:900px){
+.hero .wrap,.product .wrap,.contact .wrap{grid-template-columns:1fr}
+.cards,.stats{grid-template-columns:1fr}
+.rs{grid-template-columns:1fr 1fr}
+.tg{display:block}
+.menu{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 24px 16px;border-bottom:1px solid var(--line)}
+.menu.open{display:flex}
+.menu a{display:block;padding:12px 0}
+.nav .btn{display:none}
+section{padding:64px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="logo" viewBox="84 92 172 156"><path d="M102.4 151.9A70 70 0 0 1 237.6 151.9" fill="none" stroke="#10B981" stroke-width="12" stroke-linecap="round"/><polygon points="246.3,149.6 241.7,167.4 228.9,154.2" fill="#10B981" stroke="#10B981" stroke-width="3" stroke-linejoin="round"/><path d="M237.6 188.1A70 70 0 0 1 102.4 188.1" fill="none" stroke="#1B1F22" stroke-width="12" stroke-linecap="round"/><polygon points="93.7,190.4 98.3,172.7 111.1,185.8" fill="#1B1F22" stroke="#1B1F22" stroke-width="3" stroke-linejoin="round"/><rect x="141" y="139" width="58" height="40" rx="5" fill="#1B1F22"/><rect x="165" y="179" width="10" height="8" fill="#1B1F22"/><rect x="153" y="186" width="34" height="5" rx="2.5" fill="#1B1F22"/><path d="M170 146C190 151 192 168 170 174C148 168 150 151 170 146Z" fill="#10B981"/><path d="M170 152V170M170 162L178 156M170 162L162 156" stroke="#1B1F22" stroke-width="2" stroke-linecap="round" fill="none"/></symbol></svg>
+
+<aside class="side" id="side" aria-label="Barra lateral">
+<ul style="padding-top:8px"><li><button class="it sdt" id="sdt" aria-expanded="false" aria-controls="sdn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="lb">Menú</span></button></li></ul>
+<a class="sdb" href="#inicio" aria-label="EcoReboot, inicio"><svg aria-hidden="true"><use href="#logo"/></svg><span class="lb" style="color:var(--ink)">Eco<span>Reboot</span></span></a>
+<nav id="sdn" aria-label="Principal"><ul><li><a class="it" href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><span class="lb">Inicio</span></a></li><li><a class="it" href="#nosotros"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span class="lb">Sobre Nosotros</span></a></li><li><a class="it" href="#pc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8M12 16v5"/></svg><span class="lb">EcoReboot PC</span></a></li><li><a class="it" href="#impacto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l8-8"/></svg><span class="lb">Impacto Ecológico</span></a></li><li><a class="it" href="#faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17v.01"/></svg><span class="lb">Dudas Frecuentes</span></a></li><li><a class="it" href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="lb">Contacto</span></a></li></ul><ul style="margin-top:10px"><li><a class="it don" href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8c-3 0-5-4-2-4 2 0 2 4 2 4zM12 8c3 0 5-4 2-4-2 0-2 4-2 4z"/></svg><span class="lb">Dona tus Equipos</span></a></li></ul></nav>
+<div class="sep"></div>
+<p class="sgt lb">Síguenos</p>
+<ul style="padding-bottom:16px"><li><a class="it" href="https://www.instagram.com/EcoRebootTech" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><span class="lb">Instagram</span></a></li><li><a class="it" href="https://www.tiktok.com/@EcoRebootTech" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 3 2.5 4.5 5 4.5"/></svg><span class="lb">TikTok</span></a></li><li><a class="it" href="https://www.linkedin.com/company/ecoreboot" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 1.5-3 3-3s2 1 2 3v4"/></svg><span class="lb">LinkedIn</span></a></li></ul>
+</aside>
+
+<main>
+<section class="hero" id="inicio">
+<div class="wrap">
+<div>
+<h1>EcoReboot: Reinicia tu tecnología, transforma el planeta.</h1>
+<p class="sub">Rescatamos componentes en desuso de empresas y colegios para ensamblar ordenadores de alta calidad, modulares y 100% operativos.</p>
+<div class="cta">
+<a class="btn" href="#pc">Ver nuestro ordenador modular</a>
+<a class="btn ghost" href="#contacto">Contactar para donar</a>
+</div>
+</div>
+<svg viewBox="0 0 400 360" role="img" aria-label="Ordenador modular con un módulo siendo sustituido dentro de un ciclo de reciclaje"><g class="spin"><path d="M60 150A140 140 0 0 1 340 150" fill="none" stroke="#10B981" stroke-width="10" stroke-linecap="round"/><polygon points="350,142 338,170 318,152" fill="#10B981"/><path d="M340 210A140 140 0 0 1 60 210" fill="none" stroke="#1B1F22" stroke-width="10" stroke-linecap="round"/><polygon points="50,218 62,190 82,208" fill="#1B1F22"/></g><rect x="140" y="70" width="120" height="220" rx="14" fill="#1B1F22"/><rect x="154" y="86" width="92" height="38" rx="6" fill="#2D3438" stroke="#10B981" stroke-width="2"/><rect x="154" y="132" width="92" height="38" rx="6" fill="#2D3438" stroke="#10B981" stroke-width="2"/><rect x="154" y="178" width="92" height="38" rx="6" fill="#2D3438" stroke="#10B981" stroke-width="2"/><rect class="pulse" x="154" y="224" width="92" height="38" rx="6" fill="#10B981"/><circle cx="246" cy="278" r="4" fill="#10B981"/></svg>
+</div>
+</section>
+
+<section class="slides" id="nosotros" aria-label="Sobre nosotros">
+<div class="pin">
+<div class="track" id="trk">
+<div class="sl"><div><h2>De residuo electrónico a ordenador útil</h2><p class="lead">En EcoReboot cerramos el ciclo: lo que otros tiran, nosotros lo convertimos en soluciones informáticas con una segunda vida.</p><p class="hint">Sigue bajando para ver cómo lo hacemos, o usa las flechas.</p></div><svg class="vis" role="img" aria-label="Logotipo de EcoReboot"><use href="#logo"/></svg></div>
+<div class="sl"><div><span class="step">Paso 1</span><h3>Captación sostenible</h3><p class="lead">Recogemos hardware en desuso de colegios y empresas.</p><ul><li>Colegios, empresas y también particulares</li><li>Coordinamos la recogida contigo</li><li>Equipos que de otro modo se quedarían olvidados en un almacén</li></ul></div><svg class="vis" viewBox="0 0 300 240" role="img" aria-label="Monitor y torre de ordenador en desuso"><rect x="30" y="40" width="140" height="100" rx="8" fill="#1B1F22"/><rect x="41" y="51" width="118" height="70" rx="4" fill="#2D3438"/><rect x="90" y="140" width="20" height="14" fill="#1B1F22"/><rect x="68" y="154" width="64" height="8" rx="4" fill="#1B1F22"/><rect x="180" y="90" width="90" height="130" rx="10" fill="#10B981"/><rect x="194" y="108" width="62" height="12" rx="3" fill="#fff" opacity=".85"/><rect x="194" y="128" width="62" height="12" rx="3" fill="#fff" opacity=".85"/><circle cx="225" cy="196" r="9" fill="#fff"/></svg></div>
+<div class="sl"><div><span class="step">Paso 2</span><h3>Reacondicionamiento modular</h3><p class="lead">Rescatamos las piezas funcionales y montamos equipos a medida.</p><ul><li>Cada pieza se prueba antes de montarse</li><li>Equipos modulares, fáciles de actualizar</li><li>Si una pieza falla, se cambia solo esa pieza</li></ul></div><svg class="vis" viewBox="0 0 300 240" role="img" aria-label="Tres módulos de ordenador apilados, uno nuevo en verde"><rect x="60" y="30" width="180" height="52" rx="10" fill="#1B1F22" stroke="#10B981" stroke-width="3"/><rect x="60" y="94" width="180" height="52" rx="10" fill="#1B1F22" stroke="#10B981" stroke-width="3"/><rect x="60" y="158" width="180" height="52" rx="10" fill="#10B981"/></svg></div>
+<div class="sl"><div><span class="step">Paso 3</span><h3>Reciclaje responsable</h3><p class="lead">Los componentes que ya no se pueden aprovechar los vendemos a plantas especializadas (€/kg) para su tratamiento correcto.</p><ul><li>Se separan por materiales</li><li>Se entregan a plantas especializadas</li><li>Lo que no se puede reutilizar tampoco se desperdicia</li></ul></div><svg class="vis" viewBox="0 0 300 240" role="img" aria-label="Círculo de reciclaje con la indicación euros por kilo"><circle cx="150" cy="120" r="80" fill="none" stroke="#1B1F22" stroke-width="12"/><path d="M150 40A80 80 0 0 1 230 120" fill="none" stroke="#10B981" stroke-width="12" stroke-linecap="round"/><text x="150" y="134" text-anchor="middle" font-size="40" font-weight="800" fill="#1B1F22" font-family="Manrope,sans-serif">€/kg</text></svg></div>
+<div class="sl"><div><h3>Cómo donar tus equipos</h3><p class="lead">Cuatro pasos y tu tecnología empieza una segunda vida.</p><ol><li><div>Cuéntanos qué tienes<span>Rellena el formulario de contacto.</span></div></li><li><div>Coordinamos la recogida<span>Acordamos fecha y lugar contigo.</span></div></li><li><div>Evaluamos cada pieza<span>Separamos lo reutilizable de lo reciclable.</span></div></li><li><div>Empieza su segunda vida<span>Montamos EcoReboot PC o reciclamos.</span></div></li></ol><a class="btn" href="#contacto">Dona tus Equipos</a></div><svg class="vis" role="img" aria-label="Logotipo de EcoReboot"><use href="#logo"/></svg></div>
+</div>
+<div class="bar"><button class="ar" id="pv">Anterior</button><div class="dts" id="dts"></div><button class="ar" id="nx">Siguiente</button></div>
+</div>
+</section>
+
+<section class="product" id="pc">
+<div class="wrap">
+<div>
+<h2>EcoReboot PC</h2>
+<p class="lead">Un ordenador de sobremesa pensado para durar y para arreglarse sin tirarlo.</p>
+<ul class="feat">
+<li><i></i><div><b>100% modular</b><span>Cada componente se cambia de forma independiente.</span></div></li>
+<li><i></i><div><b>Actualizable en cualquier momento</b><span>Mejora memoria, disco o procesador cuando lo necesites.</span></div></li>
+<li><i></i><div><b>Piezas testeadas</b><span>Cada pieza pasa pruebas antes de montarse.</span></div></li>
+<li><i></i><div><b>Garantía por pieza</b><span>Si una pieza se avería, sustituimos solo esa pieza.</span></div></li>
+</ul>
+<div class="spec"><div><b>Configuración de ejemplo:</b> procesador intermedio, 16 GB de memoria, SSD de 512 GB y gráfica integrada.</div><div><b>Precio orientativo:</b> desde 250 € según las piezas (dato de ejemplo del proyecto).</div><div><b>Cómo se compra:</b> pides información, eliges las piezas y te lo montamos y entregamos.</div></div><a class="btn" href="#contacto">Pedir información</a>
+</div>
+<div class="cfg" id="cfg"><h3>Monta tu EcoReboot PC</h3><p>Cambia el nivel de cada pieza. Después simula una avería y mira qué pasa.</p><div id="slots"></div><div class="lv" id="lv" role="status"></div></div>
+</div>
+</section>
+
+<section id="trabajo"><div class="wrap"><h2>Así trabajamos</h2><p class="lead">De la recogida al ordenador montado, el proceso paso a paso.</p><div class="gal">
+<figure><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#E3F0E9"/><rect y="225" width="400" height="75" fill="#CFE3D8"/><rect x="140" y="95" width="170" height="110" rx="10" fill="#fff" stroke="#1B1F22" stroke-width="4"/><rect x="140" y="152" width="170" height="18" fill="#10B981"/><rect x="310" y="125" width="62" height="80" rx="8" fill="#1B1F22"/><rect x="322" y="136" width="36" height="26" rx="3" fill="#BFE8D6"/><circle cx="190" cy="208" r="19" fill="#1B1F22"/><circle cx="190" cy="208" r="7" fill="#9FB0A8"/><circle cx="340" cy="208" r="19" fill="#1B1F22"/><circle cx="340" cy="208" r="7" fill="#9FB0A8"/><rect x="25" y="175" width="80" height="55" fill="#D9B98A"/><rect x="45" y="128" width="64" height="48" fill="#C9A66B"/><rect x="38" y="90" width="52" height="38" rx="4" fill="#1B1F22"/><rect x="43" y="95" width="42" height="26" rx="2" fill="#2D3438"/><rect x="58" y="128" width="12" height="4" fill="#1B1F22"/></svg><img src="img/recogida.jpg" alt="Recogida de equipos en un colegio" loading="lazy" onerror="this.remove()"><figcaption>Recogida de equipos</figcaption></figure>
+<figure><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#E3F0E9"/><rect y="225" width="400" height="75" fill="#CFE3D8"/><rect x="25" y="205" width="350" height="14" rx="3" fill="#1B1F22"/><rect x="45" y="219" width="10" height="40" fill="#1B1F22"/><rect x="345" y="219" width="10" height="40" fill="#1B1F22"/><rect x="140" y="65" width="115" height="140" rx="8" fill="#1B1F22"/><rect x="152" y="78" width="91" height="30" rx="5" fill="#2D3438" stroke="#10B981" stroke-width="2"/><rect x="152" y="116" width="91" height="30" rx="5" fill="#2D3438" stroke="#10B981" stroke-width="2"/><rect x="152" y="154" width="91" height="30" rx="5" fill="#10B981"/><rect x="40" y="120" width="80" height="58" rx="5" fill="#1B1F22"/><rect x="46" y="126" width="68" height="46" rx="3" fill="#2D3438"/><path d="M62 150l12 12 24-26" fill="none" stroke="#10B981" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="76" y="178" width="8" height="12" fill="#1B1F22"/><rect x="290" y="190" width="70" height="9" rx="2" fill="#10B981"/><rect x="295" y="175" width="60" height="9" rx="2" fill="#0B7A55"/><path d="M280 120l45-30" stroke="#4A5358" stroke-width="7" stroke-linecap="round"/><path d="M322 92l14-9" stroke="#10B981" stroke-width="9" stroke-linecap="round"/></svg><img src="img/taller.jpg" alt="Pruebas de piezas en el taller" loading="lazy" onerror="this.remove()"><figcaption>Pruebas en el taller</figcaption></figure>
+<figure><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#E3F0E9"/><rect y="225" width="400" height="75" fill="#CFE3D8"/><path d="M95 150A105 105 0 0 1 305 150" fill="none" stroke="#10B981" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 14"/><rect x="85" y="150" width="70" height="90" rx="30" fill="#10B981"/><circle cx="120" cy="120" r="25" fill="#F0C9A8"/><path d="M95 114a25 25 0 0 1 50 0 25 20 0 0 0-50 0z" fill="#1B1F22"/><rect x="165" y="140" width="70" height="100" rx="30" fill="#1B1F22"/><circle cx="200" cy="108" r="26" fill="#D9A57C"/><path d="M174 104a26 26 0 0 1 52 0 30 14 0 0 0-52 0z" fill="#4A2F1E"/><rect x="245" y="150" width="70" height="90" rx="30" fill="#0B7A55"/><circle cx="280" cy="120" r="25" fill="#B07A55"/><path d="M255 116a25 25 0 0 1 50 0 25 18 0 0 0-50 0z" fill="#1B1F22"/></svg><img src="img/equipo.jpg" alt="Equipo de EcoReboot" loading="lazy" onerror="this.remove()"><figcaption>Nuestro equipo</figcaption></figure>
+</div></div></section>
+
+<section class="impact" id="impacto">
+<div class="wrap">
+<h2>Impacto ecológico</h2>
+<p class="lead">Cada equipo que reiniciamos es basura electrónica que no llega al vertedero.</p>
+<div class="stats">
+<div class="stat"><strong>62 millones t</strong><span>de residuos electrónicos generados en el mundo en 2022</span><small>Fuente: Global E-waste Monitor 2024 (ITU y UNITAR)</small></div>
+<div class="stat"><strong>22,3 %</strong><span>se recogió y reciclo de forma documentada y correcta</span><small>Fuente: Global E-waste Monitor 2024 (ITU y UNITAR)</small></div>
+<div class="stat"><strong>82 millones t</strong><span>previstos para 2030 si no cambia la tendencia</span><small>Fuente: Global E-waste Monitor 2024 (ITU y UNITAR)</small></div>
+</div>
+<p class="note" style="color:#8C9892;margin-top:14px">Datos del sector a nivel mundial. Aquí mostraremos los resultados propios de EcoReboot cuando los tengamos.</p>
+<div class="rs" style="margin-top:22px">
+<div><h3>Reducir</h3><p>Menos equipos nuevos fabricados.</p></div>
+<div><h3>Reutilizar</h3><p>Las piezas útiles vuelven a funcionar.</p></div>
+<div><h3>Reparar</h3><p>Se arregla la pieza, no el equipo entero.</p></div>
+<div><h3>Reciclar</h3><p>Lo no aprovechable llega a plantas especializadas.</p></div>
+</div>
+<div class="calc"><label for="rg">Equipos que donas: <b id="rn">20</b></label><input type="range" id="rg" min="1" max="200" value="20" style="width:100%"><div class="co"><div><strong id="rk"></strong><span>de residuo electrónico que no acaba en un vertedero</span></div><div><strong id="rc"></strong><span>de CO₂ que se pueden evitar al no fabricar equipos nuevos</span></div></div><small>Estimación orientativa. Sustituye los valores de cálculo del archivo por los datos de tu actividad.</small></div>
+</div>
+</section>
+
+<section id="faq"><div class="wrap"><h2>Dudas frecuentes</h2><p class="lead">Las preguntas que más nos hacen, una a una. Usa las flechas para cambiar de pregunta.</p>
+<div class="fq"><div class="vp" id="vp"><div class="ft" id="ft"></div></div><div class="pb" aria-hidden="true"><span id="pbs"></span></div>
+<div class="fc"><button class="ar" id="fpv">Anterior</button><span class="mid"><span id="fct">1 / 12</span> &nbsp;<button class="ar" id="fpp">Pausar</button></span><button class="ar" id="fnx">Siguiente</button></div></div>
+</div></section>
+
+<section class="contact" id="contacto">
+<div class="wrap">
+<div>
+<h2>Dona tus equipos o pregúntanos lo que quieras</h2>
+<p class="lead">Cuéntanos qué tienes y quién eres. Te respondemos para organizar la recogida o resolver tus dudas.</p>
+</div>
+<form id="f">
+<label>Nombre<input name="nombre" required autocomplete="name"></label>
+<label>Correo electrónico<input type="email" name="email" required autocomplete="email"></label>
+<label>Tipo de donación o consulta
+<select name="tipo" required>
+<option value="">Selecciona una opción</option>
+<option>Particular</option>
+<option>Empresa</option>
+<option>Colegio</option>
+</select></label>
+<label>Mensaje<textarea name="msg" required></textarea></label>
+<button class="btn" type="submit">Enviar mensaje</button>
+<p class="note" id="st" role="status">Al enviar se abrirá tu programa de correo con el mensaje preparado.</p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div>
+<a class="brand" href="#inicio"><svg aria-hidden="true"><use href="#logo"/></svg>Eco<span style="color:#10B981">Reboot</span></a>
+<p>Reinicia tu tecnología, transforma el planeta.</p>
+</div>
+<ul>
+<li><a href="mailto:info@ecoreboot.com">info@ecoreboot.com</a></li>
+<li><a href="https://www.ecoreboot.com">www.ecoreboot.com</a></li>
+</ul>
+<ul>
+<li><a href="https://www.instagram.com/EcoRebootTech" rel="noopener">Instagram @EcoRebootTech</a></li>
+<li><a href="https://www.tiktok.com/@EcoRebootTech" rel="noopener">TikTok @EcoRebootTech</a></li>
+<li><a href="https://www.linkedin.com/company/ecoreboot" rel="noopener">LinkedIn</a></li>
+</ul>
+<p class="copy">© 2026 EcoReboot. Todos los derechos reservados. Proyecto académico: los datos, precios y plazos de esta web son ilustrativos.</p>
+</div>
+</footer>
+
+<script>
+(function(){
+var sec=document.getElementById('nosotros'),pin=sec.querySelector('.pin'),tr=document.getElementById('trk'),n=tr.children.length,cur=0,H=0,dw=document.getElementById('dts'),pv=document.getElementById('pv'),nx=document.getElementById('nx'),tx=0,ty=0,tk=false;
+var mq=matchMedia('(prefers-reduced-motion:reduce)');sec.classList.add('on');
+for(var k=0;k<n;k++){var b=document.createElement('button');b.className='dt';b.setAttribute('aria-label','Ir a la diapositiva '+(k+1)+' de '+n);b.dataset.i=k;dw.appendChild(b)}
+function set(i){cur=i;tr.style.transform='translateX(-'+(i*100)+'%)';
+[].forEach.call(dw.children,function(d,x){d.setAttribute('aria-current',x===i)});
+[].forEach.call(tr.children,function(c,x){c.setAttribute('aria-hidden',x!==i)});
+pv.disabled=i===0;nx.disabled=i===n-1}
+function prog(){var r=sec.getBoundingClientRect(),t=sec.offsetHeight-pin.offsetHeight;return{r:r,t:t,p:t>0?Math.min(1,Math.max(0,(H-r.top)/t)):0}}
+function upd(){tk=false;set(Math.round(prog().p*(n-1)))}
+function size(){var h=innerHeight-H;pin.style.height=h+'px';sec.style.height=(h+(n-1)*h*.7)+'px';upd()}
+function go(i){i=Math.max(0,Math.min(n-1,i));var q=prog();window.scrollTo({top:scrollY+q.r.top-H+(i/(n-1))*q.t,behavior:mq.matches?'auto':'smooth'})}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});
+addEventListener('resize',size);
+pv.addEventListener('click',function(){go(cur-1)});
+nx.addEventListener('click',function(){go(cur+1)});
+dw.addEventListener('click',function(e){if(e.target.dataset.i!==undefined)go(+e.target.dataset.i)});
+pin.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+pin.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(cur+(dx<0?1:-1))},{passive:true});
+addEventListener('keydown',function(e){var q=prog();if(q.r.top>H+1||q.r.bottom<innerHeight-1||/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(e.key==='ArrowRight'){go(cur+1)}else if(e.key==='ArrowLeft'){go(cur-1)}});
+size();
+})();
+
+(function(){
+var sd=document.getElementById('side'),b=document.getElementById('sdt');
+b.addEventListener('click',function(){var o=sd.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+sd.addEventListener('click',function(e){if(e.target.closest('a')){sd.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+document.addEventListener('click',function(e){if(!sd.contains(e.target)){sd.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+})();
+
+(function(){
+var Q=[
+['¿Qué equipos aceptáis?','Ordenadores de sobremesa y portátiles, monitores, teclados, ratones, discos duros, memorias y otros periféricos, aunque estén averiados o sean antiguos.'],
+['¿La recogida tiene algún coste?','Para colegios y empresas la recogida es gratuita. Los particulares pueden entregar sus equipos o pedir que los recojamos, según la zona.'],
+['¿Qué pasa con los datos de mis equipos?','Antes de reutilizar cualquier disco hacemos un borrado seguro. Si una unidad no se puede borrar, se destruye físicamente para que nadie pueda recuperar la información.'],
+['¿Cómo sé que un equipo funciona bien?','Cada pieza se prueba por separado antes de montarse y el equipo completo pasa una revisión final antes de entregarse.'],
+['¿Qué garantía tiene el EcoReboot PC?','Si una pieza se avería, sustituimos solo esa pieza y no el equipo entero. En este proyecto, el plazo de ejemplo es de 12 meses.'],
+['¿Puedo actualizar mi ordenador más adelante?','Sí. El EcoReboot PC es 100% modular, así que puedes cambiar la memoria, el disco o el procesador cuando lo necesites sin tirar el resto.'],
+['¿Qué ocurre con lo que no se puede reutilizar?','Se separa por materiales y se vende a plantas especializadas, que lo tratan de forma correcta. Así nada acaba en un vertedero.'],
+['¿Cuánto cuesta un EcoReboot PC?','El precio de ejemplo parte de unos 250 €, y depende de las piezas que elijas. Pídenos información y te preparamos una propuesta.'],
+['¿Puedo donar si solo tengo un equipo?','Claro. Cada equipo cuenta, tanto si donas uno como si es un colegio o una empresa con decenas de ellos.'],
+['¿Cuánto tarda la recogida?','Como referencia, entre 5 y 10 días laborables desde que nos escribes. Para grandes cantidades de equipos lo acordamos contigo.'],
+['¿Recibiré un justificante de mi donación?','Te entregamos un resumen de los equipos recibidos. Es un documento informativo del proyecto, no un certificado fiscal.'],
+['¿Cuál es la diferencia entre reacondicionar y reciclar?','Reacondicionar alarga la vida del equipo o de sus piezas. Reciclar recupera los materiales cuando ya no hay forma de reutilizar. Siempre priorizamos reutilizar.'],
+['¿En qué zonas trabajáis?','Empezamos por una zona local y queremos ir ampliándola. Indícanos tu ubicación en el formulario y te decimos si podemos llegar.']
+];
+var ft=document.getElementById('ft'),bar=document.getElementById('pbs'),ct=document.getElementById('fct'),pp=document.getElementById('fpp'),vp=document.getElementById('vp'),i=0,tm=0,play=!matchMedia('(prefers-reduced-motion:reduce)').matches,hov=false,vis=false;
+Q.forEach(function(q){var d=document.createElement('div');d.className='fs';var a=document.createElement('div');a.className='bq';a.textContent=q[0];var b=document.createElement('div');b.className='ba';b.textContent=q[1];d.appendChild(a);d.appendChild(b);ft.appendChild(d)});
+function dur(n){return Math.max(8000,3500+Q[n][1].split(' ').length*330)}
+function sched(){clearTimeout(tm);bar.style.animation='none';void bar.offsetWidth;vp.setAttribute('aria-live',play?'off':'polite');if(!play||hov||!vis)return;bar.style.animation='fl '+dur(i)+'ms linear forwards';tm=setTimeout(function(){show(i+1)},dur(i))}
+function show(n){i=(n+Q.length)%Q.length;ft.style.transform='translateX(-'+i*100+'%)';[].forEach.call(ft.children,function(c,x){c.setAttribute('aria-hidden',x!==i)});ct.textContent=(i+1)+' / '+Q.length;sched()}
+document.getElementById('fpv').addEventListener('click',function(){show(i-1)});
+document.getElementById('fnx').addEventListener('click',function(){show(i+1)});
+pp.addEventListener('click',function(){play=!play;pp.textContent=play?'Pausar':'Reproducir';sched()});
+var fq=document.querySelector('.fq');
+['mouseenter','focusin'].forEach(function(e){fq.addEventListener(e,function(){hov=true;sched()})});
+['mouseleave','focusout'].forEach(function(e){fq.addEventListener(e,function(){hov=false;sched()})});
+new IntersectionObserver(function(e){vis=e[0].isIntersecting;sched()}).observe(fq);
+if(!play)pp.textContent='Reproducir';
+show(0);
+})();
+
+var KG=10,CO2=300;
+function fmt(n){return n.toLocaleString('es-ES')}
+var rg=document.getElementById('rg');
+function calc(){var n=+rg.value;document.getElementById('rn').textContent=n;document.getElementById('rk').textContent=fmt(n*KG)+' kg';document.getElementById('rc').textContent=fmt(n*CO2)+' kg'}
+rg.addEventListener('input',calc);calc();
+var P=[['Procesador',['Básico','Intermedio','Avanzado']],['Memoria',['8 GB','16 GB','32 GB']],['Almacenamiento',['SSD 256 GB','SSD 512 GB','SSD 1 TB']],['Gráfica',['Integrada','Media','Potente']]];
+var lv=[0,1,1,0],bad=[0,0,0,0],msg='';
+var box=document.getElementById('slots');
+function draw(){
+var h='';
+P.forEach(function(p,i){
+h+='<div class="slot'+(bad[i]?' bad':'')+'"><div><small>'+p[0]+'</small><b>'+(bad[i]?'Pieza averiada':p[1][lv[i]])+'</b></div><div>'+
+(bad[i]?'<button class="sb" data-r="'+i+'">Sustituir solo esta</button>':'<button class="sb" data-c="'+i+'">Cambiar</button> <button class="sb" data-b="'+i+'">Simular avería</button>')+'</div></div>';
+});
+box.innerHTML=h;
+var t=lv.reduce(function(a,b){return a+b},0);
+var n=t<3?'Ofimática y estudio':t<6?'Trabajo diario y multitarea':'Diseño y juegos ligeros';
+var nb=bad.reduce(function(a,b){return a+b},0);
+document.getElementById('lv').innerHTML=nb?'Garantía por pieza<span>Solo hay que sustituir '+nb+' de 4 piezas. El resto del equipo se conserva.</span>':'Uso recomendado: '+n+'<span>Ejemplo orientativo según las piezas elegidas.</span>';
+}
+box.addEventListener('click',function(e){
+var d=e.target.dataset;if(!d)return;
+if(d.c!==undefined){lv[d.c]=(lv[d.c]+1)%3}
+else if(d.b!==undefined){bad[d.b]=1}
+else if(d.r!==undefined){bad[d.r]=0}
+else return;
+draw();
+});
+draw();
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();var d=new FormData(this);
+var body='Nombre: '+d.get('nombre')+'\nCorreo: '+d.get('email')+'\nTipo: '+d.get('tipo')+'\n\n'+d.get('msg');
+location.href='mailto:info@ecoreboot.com?subject='+encodeURIComponent('Consulta web: '+d.get('tipo'))+'&body='+encodeURIComponent(body);
+document.getElementById('st').textContent='Se ha abierto tu correo. Pulsa enviar allí para terminar.';
+});
+</script>
+</body>
+</html>
