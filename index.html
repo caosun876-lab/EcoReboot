@@ -107,9 +107,9 @@ input[type=range]{padding:0;border:0;background:none;accent-color:var(--g2);curs
 @media(max-width:900px){.co{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.spin,.pulse{animation:none}}
 .slides{padding:0;background:var(--soft)}
-.pin{position:sticky;top:0;overflow:hidden;display:flex;flex-direction:column;height:100vh}
-.track{display:flex;flex:1;min-height:0;transition:transform .7s cubic-bezier(.7,0,.2,1)}
-.sl{flex:0 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:0 max(24px,calc((100% - 1160px)/2));min-width:0}
+.pin{display:block}.on .pin{position:sticky;top:0;overflow:hidden;display:flex;flex-direction:column;height:100vh}
+.track{display:block}.on .track{display:flex;flex:1;min-height:0;transition:transform .7s cubic-bezier(.7,0,.2,1)}
+.sl{flex:0 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:48px max(24px,calc((100% - 1160px)/2));min-width:0}.on .sl{padding-top:0;padding-bottom:0}
 .sl h2,.sl h3{font-size:clamp(28px,4vw,46px);font-weight:800}
 .sl .lead{margin-bottom:22px}
 .sl ul{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:10px}
@@ -121,7 +121,7 @@ input[type=range]{padding:0;border:0;background:none;accent-color:var(--g2);curs
 .sl ol span{color:var(--mut);display:block;font-size:14px}
 .step{display:inline-block;font-weight:600;color:var(--g);margin-bottom:10px;font-size:15px}
 .vis{width:100%;max-width:340px;height:min(300px,40vh);justify-self:center}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(24px,calc((100% - 1160px)/2));border-top:1px solid var(--line);background:#fff}
+.bar{display:none}.on .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px max(24px,calc((100% - 1160px)/2));border-top:1px solid var(--line);background:#fff}
 .dts{display:flex;gap:8px;align-items:center}
 .dt{width:12px;height:12px;border-radius:50%;border:2px solid var(--g);background:transparent;padding:0;cursor:pointer}
 .dt[aria-current=true]{background:var(--g);width:30px;border-radius:8px}
@@ -129,7 +129,7 @@ input[type=range]{padding:0;border:0;background:none;accent-color:var(--g2);curs
 .ar:hover:not(:disabled){background:var(--g);color:#fff}
 .ar:disabled{opacity:.4;cursor:default}
 .hint{font-size:14px;color:var(--mut)}
-@media(max-width:900px){.sl{grid-template-columns:1fr;gap:14px;align-content:center}.vis{height:min(160px,22vh);order:-1}.sl h2,.sl h3{font-size:28px}.hint{display:none}.sl .lead{font-size:16px;margin-top:10px;margin-bottom:14px}.sl li{font-size:15px}}
+@media(max-width:900px){.sl{grid-template-columns:1fr;gap:14px;align-content:center}.vis{height:min(160px,22vh);order:-1}.sl h2,.sl h3{font-size:28px}.hint{display:none}.on .bar{padding:12px 10px;gap:6px}.ar{padding:8px 12px;font-size:14px}.dts{gap:5px}.sl .lead{font-size:16px;margin-top:10px;margin-bottom:14px}.sl li{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.track{transition:none}}
 body{padding-left:72px}
 .side{position:fixed;left:0;top:0;bottom:0;width:72px;background:#fff;border-right:1px solid var(--line);z-index:30;display:flex;flex-direction:column;overflow:hidden auto;scrollbar-width:none;transition:width .25s ease,box-shadow .25s}
@@ -141,8 +141,8 @@ body{padding-left:72px}
 .it{display:flex;align-items:center;gap:16px;padding:12px;border-radius:12px;text-decoration:none;color:var(--mut);font:inherit;font-weight:600;font-size:15px;white-space:nowrap;background:none;border:0;width:100%;cursor:pointer}
 .it svg{flex:none;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .it:hover{background:var(--soft);color:var(--g)}
-.it.cta{background:var(--g);color:#fff}
-.it.cta:hover{background:#085f42;color:#fff}
+.it.don{background:var(--g);color:#fff}
+.it.don:hover{background:#085f42;color:#fff}
 .lb{opacity:0;transition:opacity .15s}
 .side:hover .lb,.side:focus-within .lb,.side.open .lb{opacity:1;transition-delay:.08s}
 .sep{height:1px;background:var(--line);margin:14px 20px}
@@ -171,7 +171,7 @@ section{padding:64px 0}
 <aside class="side" id="side" aria-label="Barra lateral">
 <ul style="padding-top:8px"><li><button class="it sdt" id="sdt" aria-expanded="false" aria-controls="sdn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="lb">Menú</span></button></li></ul>
 <a class="sdb" href="#inicio" aria-label="EcoReboot, inicio"><svg aria-hidden="true"><use href="#logo"/></svg><span class="lb" style="color:var(--ink)">Eco<span>Reboot</span></span></a>
-<nav id="sdn" aria-label="Principal"><ul><li><a class="it" href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><span class="lb">Inicio</span></a></li><li><a class="it" href="#nosotros"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span class="lb">Sobre Nosotros</span></a></li><li><a class="it" href="#pc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8M12 16v5"/></svg><span class="lb">EcoReboot PC</span></a></li><li><a class="it" href="#impacto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l8-8"/></svg><span class="lb">Impacto Ecológico</span></a></li><li><a class="it" href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="lb">Contacto</span></a></li></ul><ul style="margin-top:10px"><li><a class="it cta" href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8c-3 0-5-4-2-4 2 0 2 4 2 4zM12 8c3 0 5-4 2-4-2 0-2 4-2 4z"/></svg><span class="lb">Dona tus Equipos</span></a></li></ul></nav>
+<nav id="sdn" aria-label="Principal"><ul><li><a class="it" href="#inicio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><span class="lb">Inicio</span></a></li><li><a class="it" href="#nosotros"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span class="lb">Sobre Nosotros</span></a></li><li><a class="it" href="#pc"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 21h8M12 16v5"/></svg><span class="lb">EcoReboot PC</span></a></li><li><a class="it" href="#impacto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-9 5-14 15-14 0 10-5 15-14 15M5 19l8-8"/></svg><span class="lb">Impacto Ecológico</span></a></li><li><a class="it" href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="lb">Contacto</span></a></li></ul><ul style="margin-top:10px"><li><a class="it don" href="#contacto"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="5" rx="1"/><path d="M5 13v8h14v-8M12 8v13M12 8c-3 0-5-4-2-4 2 0 2 4 2 4zM12 8c3 0 5-4 2-4-2 0-2 4-2 4z"/></svg><span class="lb">Dona tus Equipos</span></a></li></ul></nav>
 <div class="sep"></div>
 <p class="sgt lb">Síguenos</p>
 <ul style="padding-bottom:16px"><li><a class="it" href="https://www.instagram.com/EcoRebootTech" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><span class="lb">Instagram</span></a></li><li><a class="it" href="https://www.tiktok.com/@EcoRebootTech" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5M14 3c.5 3 2.5 4.5 5 4.5"/></svg><span class="lb">TikTok</span></a></li><li><a class="it" href="https://www.linkedin.com/company/ecoreboot" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 1.5-3 3-3s2 1 2 3v4"/></svg><span class="lb">LinkedIn</span></a></li></ul>
@@ -285,13 +285,9 @@ section{padding:64px 0}
 </footer>
 
 <script>
-var tg=document.getElementById('tg'),m=document.getElementById('menu');
-tg.addEventListener('click',function(){var o=m.classList.toggle('open');tg.setAttribute('aria-expanded',o)});
-m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');tg.setAttribute('aria-expanded','false')}});
-
 (function(){
 var sec=document.getElementById('nosotros'),pin=sec.querySelector('.pin'),tr=document.getElementById('trk'),n=tr.children.length,cur=0,H=0,dw=document.getElementById('dts'),pv=document.getElementById('pv'),nx=document.getElementById('nx'),tx=0,ty=0,tk=false;
-var mq=matchMedia('(prefers-reduced-motion:reduce)');
+var mq=matchMedia('(prefers-reduced-motion:reduce)');sec.classList.add('on');
 for(var k=0;k<n;k++){var b=document.createElement('button');b.className='dt';b.setAttribute('aria-label','Ir a la diapositiva '+(k+1)+' de '+n);b.dataset.i=k;dw.appendChild(b)}
 function set(i){cur=i;tr.style.transform='translateX(-'+(i*100)+'%)';
 [].forEach.call(dw.children,function(d,x){d.setAttribute('aria-current',x===i)});
